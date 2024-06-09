@@ -30,7 +30,7 @@ export default function CoursesPage() {
     return (
         
 
-        <div className="h-screen bg-slate-700 p-4 flex flex-col">
+        <div className="h-screen bg-slate-700 p-4 flex flex-col pm-6">
             {console.log(classData)}
             <h1 className="text-center text-3xl">Our Offered Courses</h1>
             

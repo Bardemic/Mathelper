@@ -21,7 +21,7 @@ export default function UnitBar({unit, sections, curPage, curClass}) {
                 {sections3 ? sections3.map((section) => {
                     if(section.id == curPage) return (<div className="text-green-500" key={section.id}>{section.name}</div>)
                     else return (
-                        <div key={section.id} onClick={() => {router.push(`${section.id}`)}}>{section.name}</div>
+                        <div key={section.id} className="hover:text-green-300" onClick={() => {router.push(`${section.id}`)}}>{section.name}</div>
                     )
                 }) : <></>}
             </div>
