@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import UnitBar from "./unit";
 
-export default function Sidebar({units_sections, currentSection}) {
+export default function Sidebar({units_sections, currentSection, currentClass}) {
     
     const [units, setUnits] = useState([])
     const [sections, setSections] = useState([])
@@ -33,7 +33,7 @@ export default function Sidebar({units_sections, currentSection}) {
                     {console.log(units)}
                     {units.length ? units.map((unit) => {
                         return (
-                        <UnitBar key={unit.id} unit={unit} sections={sections} curPage={currentSection}></UnitBar>
+                        <UnitBar key={unit.id} unit={unit} sections={sections} curPage={currentSection} curClass={currentClass}></UnitBar>
                         )
                     }) : <></>}
                 </div>

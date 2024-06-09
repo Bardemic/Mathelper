@@ -45,15 +45,15 @@ export default function page1({params: severalIDs}) {
     //const id = sectionID.sectionID
     return (
         <div className="h-screen bg-slate-700 flex">
-           <Sidebar units_sections={classData} currentSection={sectionID}></Sidebar> 
+           <Sidebar units_sections={classData} currentSection={sectionID} currentClass={classID}></Sidebar> 
             <div className="h-full flex flex-col items-center w-full">
                 <div className="h-4/5 flex justify-center items-center w-full">
                 {currentSection.links ? <iframe className=" w-2/3 h-2/3" src={currentSection.links} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> : <></>} 
                 </div>
                 <div className="flex justify-around w-2/3">
-                    <button className="p-2 rounded-lg outline outline-blue-400 w-40">Previous Section</button>
-                    <button className="p-2 rounded-lg outline outline-red-400 w-40">Mark Completed</button>
-                    <button className="p-2 rounded-lg outline outline-blue-400 w-40">Next Section</button>
+                    <button className="p-2 rounded-lg outline outline-blue-400 w-40 hover:bg-blue-400">Previous Section</button>
+                    <button className="p-2 rounded-lg outline outline-red-400 w-40 hover:bg-red-400">Mark Completed</button>
+                    <button className="p-2 rounded-lg outline outline-blue-400 w-40 hover:bg-blue-400">Next Section</button>
                 </div>
             </div>
         </div>

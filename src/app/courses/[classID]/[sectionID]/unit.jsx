@@ -1,8 +1,10 @@
 'use client'
 
+import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
-export default function UnitBar({unit, sections, curPage}) {
+export default function UnitBar({unit, sections, curPage, curClass}) {
+    const router = useRouter()
     const [sections3, setSections] = useState([])
     useEffect(() => {
         let sections2 = []
@@ -19,7 +21,7 @@ export default function UnitBar({unit, sections, curPage}) {
                 {sections3 ? sections3.map((section) => {
                     if(section.id == curPage) return (<div className="text-green-500" key={section.id}>{section.name}</div>)
                     else return (
-                        <div key={section.id}>{section.name}</div>
+                        <div key={section.id} onClick={() => {router.push(`${section.id}`)}}>{section.name}</div>
                     )
                 }) : <></>}
             </div>
