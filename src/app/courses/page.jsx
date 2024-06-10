@@ -1,7 +1,8 @@
 'use client'
 import { useEffect, useState } from "react"
 import supabase from "../../../utils/supabase"
-import Singlecourse from "./Singlecourse"
+import Singlecourse from "./singlecourse"
+
 //import { createClient } from '@/utils/supabase/server'
 //import { cookies } from 'next/headers'
 
@@ -16,7 +17,7 @@ async function fetchClassData() {
 }
 
 export default function CoursesPage() {
-    const [classData, setClassData] = useState([]);
+    const [classData, setClassData] = useState([{id: 'test', name: "test"}]);
 
     useEffect(() => {
         async function getClassData() {
