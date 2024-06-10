@@ -9,7 +9,7 @@ const buttonPress = (id) => {
     router.push(`/${id}/`)
 }
 
-export default function CourseTile({courseObj}) {
+export default function Singlecourse({courseObj}) {
     const router = useRouter()
     return (
         <div className="w-64 gap-8 flex-0 flex flex-col justify-between items-center p-3 outline-white outline">

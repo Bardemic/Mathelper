@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react"
 import supabase from "../../../utils/supabase"
-import CourseTile from "./Singlecourse"
+import Singlecourse from "./Singlecourse"
 //import { createClient } from '@/utils/supabase/server'
 //import { cookies } from 'next/headers'
 
@@ -39,7 +39,7 @@ export default function CoursesPage() {
                 {classData.length > 0 ? classData.map((classT) => {
                     if(classT.over_class_id == null){
                         return (
-                            <CourseTile key={classT.id} courseObj={classT}></CourseTile>
+                            <Singlecourse key={classT.id} courseObj={classT}></Singlecourse>
                         )
                     }
                 }) : <></>}
